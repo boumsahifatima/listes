@@ -6,12 +6,14 @@ typedef struct element
  int val;
  struct element *suivant;
 } element;
+// ajouter au debut
 element* ajouterDebut( element* liste, int valeur){
  element* nouveau = malloc(sizeof(element));
  nouveau ->val = valeur;
  nouveau ->suivant = liste;
  return nouveau ;
  }
+ //ajouter a la fin de la liste 
  element* ajouterFin( element* liste, int valeur){
  element* nouveau = malloc(sizeof(element));
  nouveau->val = valeur;
@@ -29,6 +31,7 @@ element* ajouterDebut( element* liste, int valeur){
  temp->suivant = nouveau;
  return liste;
  } }
+ //affichage
 void afficherListe( element* liste){
  element *tmp = liste;
  while(tmp != NULL)
@@ -39,6 +42,7 @@ void afficherListe( element* liste){
 int main(){
  element* liste=NULL;
  int i, valeur;
+ // remplir la liste 
  for (i=0;i<5;i++){
  printf(" entrer une valeur ");
  scanf("%d",&valeur);
